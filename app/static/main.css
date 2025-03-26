@@ -3,11 +3,18 @@ body {
     text-align: center;
     background-color: rgb(251, 249, 228);
 }
-
+#app_name{
+  color: #04AA6D;
+}
+#pending_tasks{
+  color: #ff0303;
+}
 form {
     margin-bottom: 20px;
 }
-
+#completed_tasks{
+  color: #710707;
+}
 .button {
     display: inline-block;
     padding: 15px 25px;

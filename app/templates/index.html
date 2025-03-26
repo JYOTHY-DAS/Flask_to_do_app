@@ -6,7 +6,7 @@
         <button class="button" type="submit">Add Task</button>
     </form>
 
-    <h2>Pending Tasks</h2>
+    <h2 id="pending_tasks">Pending Tasks</h2>
     <ul>
         {% for task in tasks %}
             <li>{{ task.content }} 
