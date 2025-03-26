@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    color: #095852;
 }
 
 form {
@@ -13,6 +14,6 @@ button {
 
 a {
     text-decoration: none;
-    color: green;
+    color: rgb(242, 248, 242);
     font-weight: bold;
 }
