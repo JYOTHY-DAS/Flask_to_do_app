@@ -1,12 +1,11 @@
-{% extends "base.html" %} <!--Indicates that this file inherits from base.html-->
-<!--Code between {% block content %} and {% endblock %} fills in the {% block content %} section of base.html-->
+{% extends "base.html" %}
 
 {% block content %}
     <h2>Completed Tasks</h2>
     <ul>
-        {% for task in tasks %} <!--Starts a loop that goes through each completed task in the tasks list-->
-            <li>{{ task.content }}</li> <!--Inserts the content of the task inside the <li> tag-->
-        {% endfor %} <!-- Marks the end of the loop-->
+        {% for task in tasks %}
+            <li>{{ task.content }}</li>
+        {% endfor %}
     </ul>
 
     <a href="{{ url_for('index') }}">Back to Tasks</a>

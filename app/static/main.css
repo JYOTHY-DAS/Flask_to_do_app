@@ -1,19 +1,38 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    color: #095852;
+    background-color: rgb(251, 249, 228);
 }
 
 form {
     margin-bottom: 20px;
 }
 
-button {
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
     cursor: pointer;
-}
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 a {
     text-decoration: none;
-    color: rgb(242, 248, 242);
+    color: green;
     font-weight: bold;
 }
