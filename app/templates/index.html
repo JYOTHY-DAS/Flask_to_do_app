@@ -1,16 +1,16 @@
-{% extends "base.html" %}
+{% extends "base.html" %} <!--Indicates that this file inherits from base.html-->
 
 {% block content %}
-    <form action="/add" method="POST">
-        <input type="text" name="content" placeholder="New task" required>
-        <button type="submit">Add Task</button>
+    <form action="/add" method="POST"> <!--Creates an HTML form that sends data to "/add" (handled by Flask).-->
+        <input type="text" name="content" placeholder="Enter your new task here" required> <!--Creates a text input field which cannot be left empty.The entered text will be sent as request.form["content"] in Flask-->
+        <button type="submit">Add New Task</button>
     </form>
 
     <h2>Pending Tasks</h2>
     <ul>
         {% for task in tasks %}
             <li>{{ task.content }} 
-                <a href="{{ url_for('mark_done', task_id=task.id) }}">✔ Done</a>
+                <a href="{{ url_for('mark_done', task_id=task.id) }}">  ✔ Done</a>
             </li>
         {% endfor %}
     </ul>
