@@ -3,17 +3,17 @@
 {% block content %}
     <form action="/add" method="POST"> <!--Creates an HTML form that sends data to "/add" (handled by Flask).-->
         <input type="text" name="content" placeholder="Enter your new task here" required> <!--Creates a text input field which cannot be left empty.The entered text will be sent as request.form["content"] in Flask-->
-        <button type="submit">Add New Task</button>
+        <button type="submit"> Add New Task </button> <!--submit button that sends the task data to the /add route when clicked-->
     </form>
 
     <h2>Pending Tasks</h2>
     <ul>
-        {% for task in tasks %}
-            <li>{{ task.content }} 
-                <a href="{{ url_for('mark_done', task_id=task.id) }}">  ✔ Done</a>
+        {% for task in tasks %} <!-- Loops through the tasks list -->
+            <li>{{ task.content }} <!--Creates list item (<li>) of tasks-->
+                <a href="{{ url_for('mark_done', task_id=task.id) }}"> ✔ Done </a> <!--Create hyperlink and dynamically generates the URL (/done/task_id)-->
             </li>
         {% endfor %}
     </ul>
 
-    <a href="{{ url_for('show_done') }}">Show Completed Tasks</a>
+    <a href="{{ url_for('show_done') }}">Show Completed Tasks</a> <!--Hyperlink to show completed tasks-->
 {% endblock %}
