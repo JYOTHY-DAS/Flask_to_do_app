@@ -2,15 +2,15 @@
 
 {% block content %}
     <form action="/add" method="POST">
-        <input type="text" name="content" placeholder="New task" required>
-        <button class="button" type="submit">Add Task</button>
+        <input type="text" name="content" placeholder="Enter new task here" required>
+        <button class="button" type="submit">Click to add new task</button>
     </form>
 
     <h2 id="pending_tasks">Pending Tasks</h2>
     <ul>
         {% for task in tasks %}
             <li>{{ task.content }} 
-                <a href="{{ url_for('mark_done', task_id=task.id) }}">✔ Done</a>
+                <a href="{{ url_for('mark_done', task_id=task.id) }}"> ✔ Done</a>
             </li>
         {% endfor %}
     </ul>
