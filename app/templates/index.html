@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="/add" method="POST">
+        <input type="text" name="content" placeholder="New task" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <h2>Pending Tasks</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.content }} 
+                <a href="{{ url_for('mark_done', task_id=task.id) }}">✔ Done</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('show_done') }}">Show Completed Tasks</a>
+{% endblock %}
