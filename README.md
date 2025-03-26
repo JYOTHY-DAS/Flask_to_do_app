@@ -68,9 +68,10 @@ Go to **[http://127.0.0.1:5000/](http://127.0.0.1:5000/)** to use the app.
 ---
 
 ## 🔧 Future Enhancements
-🔹 Add user authentication  
-🔹 Implement task categories  
-🔹 Improve UI with Bootstrap  
+🔹 Improve UI with Bootstrap
+🔹 Implement Task Categories
+🔹 Add User Authentication
+🔹 Deploy on PythonAnywhere
 
 ---
 
